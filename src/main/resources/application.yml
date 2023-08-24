@@ -1,0 +1,28 @@
+logging:
+  level:
+    root: debug
+    org.flywaydb: TRACE
+    org.springframework.boot.actuate.endpoint.mvc: DEBUG
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://0.0.0.0:3306/escola?createDatabaseIfNotExist=true&useTimezone=true&serverTimezone=UTC
+    username: root
+  flyway:
+    enabled: true
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL8Dialect
+  messages:
+    basename: messages
+    fallback-to-system-locale: false
+    encoding: UTF-8
+  output:
+    ansi:
+      enabled: ALWAYS
